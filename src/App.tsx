@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import Continent from './Components/Continent';
+import Country from './Components/Country';
+import {fetchContinents, fetchCountriesByContinent} from "./API/apiRequests";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(): JSX.Element {
+
+    const [continents, setContinents] = useState([]);
+    const [countries, setCountries] = useState([]);
+    const [continentCode, setContinentCode] = useState('');
+
+    useEffect(() => {
+        fetchContinents()
+          .then(response => setContinents(response.data.continents))
+    },[]);
+
+
+    useEffect(() => {
+        fetchCountriesByContinent(continentCode)
+            .then( response => {
+                setCountries(response.data.continent.countries);
+            })
+    },[continentCode]);
+
+    const handleContinentChange = (ev: any): void => {
+        ev.preventDefault();
+        setContinentCode(ev.target.value);
+    };
+
+    return (
+        <div className="App">
+
+            <div className="border-b-2 mx-8">
+                <h1 className="text-4xl font-black py-8">Countries by Continent</h1>
+            </div>
+
+            <div className="flex flex-row mx-8 py-8">
+                <div className="w-1/5 mr-16" >
+                    <ul className="border-b-2  flex flex-col justify-between ">
+                    {
+                    continents.map( (continent, index) => <Continent key={index} continent={continent} handleContinentChange={handleContinentChange}/>)
+                    }
+                    </ul>
+                </div>
+
+                <div className="border-radius-4 border-4 rounded w-4/5 flex flex-wrap justify-between">
+                    {
+                    countries.map( (country, index) => <Country key={index} country={country} />)
+                    }
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
+
