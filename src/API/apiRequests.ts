@@ -39,7 +39,7 @@ export const fetchCountriesByContinent = async (continentCode: string): Promise<
             Accept: 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query: `{ continent(code: "${continentCode}") { countries { name currency capital languages { name } }}}` }),
+        body: JSON.stringify({ query: `{ continent(code: "${continentCode}") { countries { code name currency capital languages { name } }}}` }),
     };
 
     const response = await fetch('https://countries.trevorblades.com/', settings);
