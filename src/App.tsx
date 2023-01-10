@@ -7,7 +7,7 @@ function App(): JSX.Element {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="countries/:countryId" element={<Country />} />
+            <Route path="countries/:countryCode" element={<Country />} />
             <Route path="*" element={<PageNotFound />} />
         </Routes>
     );
