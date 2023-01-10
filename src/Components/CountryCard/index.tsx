@@ -11,7 +11,7 @@ interface countryJson {
     }
 }
 
-const Country = (props: countryJson): JSX.Element => {
+const CountryCard = (props: countryJson): JSX.Element => {
 
     const {name, capital, currency, languages} = props.country;
 
@@ -25,4 +25,4 @@ const Country = (props: countryJson): JSX.Element => {
     );
 };
 
-export default Country;
+export default CountryCard;
