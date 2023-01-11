@@ -12,14 +12,15 @@ function Home(): JSX.Element {
     useEffect(() => {
         fetchContinents()
             .then(response => setContinents(response.data.continents))
+            .catch(err => err.message = 'Error! Could not resolve promise.');
     },[]);
-
 
     useEffect(() => {
         fetchCountriesByContinent(continentCode)
             .then( response => {
-                setCountries(response.data.continent.countries);
+                setCountries(response.data.continent.countries)
             })
+            .catch(err => err.message = 'Error! Could not resolve promise.');
     },[continentCode]);
 
     const handleContinentChange = (ev: any): void => {
