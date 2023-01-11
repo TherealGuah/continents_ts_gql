@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 
 interface countryJson {
     country: {
-        code: string
+        code: string,
         name: string,
         capital: string,
         currency: string,
         languages: [
-            { name: string }
+            {
+                name: string
+            }
         ]
     }
 }
