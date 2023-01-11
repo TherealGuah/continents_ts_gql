@@ -50,22 +50,7 @@ export const fetchCountriesByContinent = async (continentCode: string): Promise<
 
 interface CountryData {
     data: {
-        country: {
-            code: string,
-            name: string,
-            native: string,
-            phone: string,
-            continent: {
-                name: string
-            },
-            capital: string,
-            currency: string,
-            languages: {
-                name: string
-            },
-            emoji: string,
-            emojiU: string
-        }
+        country: []
     }
 }
 export const fetchCountryByCode = async (countryCode: string|undefined): Promise<CountryData> => {
