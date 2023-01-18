@@ -1,11 +1,5 @@
 import React from 'react';
 
-// interface continentJson {
-//         continent: {
-//             name: string
-//         }
-// }
-
 const Continent = (props: any): JSX.Element => {
 
     const { name, code } = props.continent;
