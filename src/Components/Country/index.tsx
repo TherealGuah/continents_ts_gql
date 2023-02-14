@@ -17,8 +17,6 @@ function Country(): JSX.Element {
             .catch(err => err.message = 'Error! Could not resolve promise.');
     }, [countryCode]);
 
-    // console.log(country);
-
     return  (
       <>
           {/*<CountryData country={country}/>*/}

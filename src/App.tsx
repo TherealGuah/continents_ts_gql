@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
-import Home from './Components/Home/Home';
-import PageNotFound from "./Components/PageNotFound/PageNotFound";
-import Country from './Components/Country/Country';
+import Home from './Components/Home';
+import PageNotFound from "./Components/PageNotFound";
+import Country from "./Components/Country";
 
 function App(): JSX.Element {
     return (

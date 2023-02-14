@@ -1,5 +1,5 @@
-import Continent from "../Continent";
-import CountryCard from "../CountryCard";
+import Continent from "../Continent/index";
+import CountryCard from "../CountryCard/index";
 import React, {useEffect, useState} from "react";
 import {fetchContinents, fetchCountriesByContinent} from "../../API/apiRequests";
 
