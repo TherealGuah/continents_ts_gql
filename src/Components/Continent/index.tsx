@@ -1,8 +1,14 @@
-import React from 'react';
+interface  Continent {
+    continent: {
+        name: string,
+        code: string
+    }
 
-const Continent = (props: any): JSX.Element => {
+    handleContinentChange: (ev: any) => void;
+}
+const Continent = (props: Continent): JSX.Element => {
 
-    const { name, code } = props.continent;
+    const { name, code} = props.continent;
 
     return(
         <li className="mb-4 hover:font-bold hover:bg-sky-400/75 hover:text-white shadow-lg rounded-lg">
