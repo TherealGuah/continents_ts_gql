@@ -15,13 +15,13 @@ function Country(): JSX.Element {
                 setCountry(response.data.country);
             })
             .catch(err => err.message = 'Error! Could not resolve promise.');
-    }, []);
+    }, [countryCode]);
 
-    console.log(country);
+    // console.log(country);
 
     return  (
       <>
-          <CountryData country={country}/>
+          {/*<CountryData country={country}/>*/}
           <Link to={'/'}>
               <button>Back to Continents</button>
           </Link>
