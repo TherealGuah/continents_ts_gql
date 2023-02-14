@@ -1,4 +1,4 @@
-interface  Continent {
+interface ContinentData {
     continent: {
         name: string,
         code: string
@@ -6,7 +6,7 @@ interface  Continent {
 
     handleContinentChange: (ev: any) => void;
 }
-const Continent = (props: Continent): JSX.Element => {
+const Continent = (props: ContinentData): JSX.Element => {
 
     const { name, code} = props.continent;
 
