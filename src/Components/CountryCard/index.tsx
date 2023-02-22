@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface countryJson {
+interface CountryJson {
     country: {
         code: string,
         name: string,
@@ -15,7 +14,7 @@ interface countryJson {
     }
 }
 
-const CountryCard = (props: countryJson): JSX.Element => {
+const CountryCard = (props: CountryJson): JSX.Element => {
 
     const { code, name, capital, currency, languages} = props.country;
 
