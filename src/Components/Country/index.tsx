@@ -15,7 +15,7 @@ function Country(): JSX.Element {
                 setCountry(response.data.country);
             })
             .catch(err => err.message = 'Error! Could not resolve promise.');
-    }, []);
+    }, [countryCode]);
 
     return  (
         <>
