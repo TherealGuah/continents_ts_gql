@@ -1,4 +1,4 @@
-interface ContinentData {
+interface ContinentJson {
     continent: {
         name: string,
         code: string
@@ -6,9 +6,10 @@ interface ContinentData {
 
     handleContinentChange: (ev: any) => void;
 }
-const Continent = (props: ContinentData): JSX.Element => {
 
-    const { name, code} = props.continent;
+const Continent = (props: ContinentJson): JSX.Element => {
+
+    const { name, code } = props.continent;
 
     return(
         <li className="mb-4 hover:font-bold hover:bg-sky-400/75 hover:text-white shadow-lg rounded-lg">
