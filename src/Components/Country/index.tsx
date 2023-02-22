@@ -16,14 +16,16 @@ function Country(): JSX.Element {
             })
             .catch(err => err.message = 'Error! Could not resolve promise.');
     }, []);
-    console.log(country);
+
     return  (
-      <>
-          <CountryData country={country}/>
-          <Link to={'/'}>
-              <button>Back to Continents</button>
-          </Link>
-      </>
+        <>
+            <h1>Country Details</h1>
+            {/*@ts-ignore*/}
+            <CountryData country={country}/>
+            <Link to={'/'}>
+                <button>Back to Continents</button>
+            </Link>
+        </>
     );
 }
 
