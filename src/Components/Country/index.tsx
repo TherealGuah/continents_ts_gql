@@ -22,7 +22,7 @@ function Country(): JSX.Element {
             {/*@ts-ignore*/}
             <CountryData country={country}/>
             <Link to={'/'}
-                  className="m-6 mt-8 rounded-md bg-sky-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="m-6 mt-8 rounded-md bg-sky-400 px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
                 Back to Continents
             </Link>

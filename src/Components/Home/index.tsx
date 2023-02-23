@@ -44,7 +44,7 @@ function Home(): JSX.Element {
                     </ul>
                 </div>
 
-                <div className="border-radius-4 border-4 rounded w-4/5 flex flex-wrap justify-between">
+                <div className="border-radius-4 border-4 rounded w-4/5 flex flex-wrap justify-between bg-gray-100/75">
                     {
                         countries.map( (country, index) => <CountryCard key={index} country={country} />)
                     }
