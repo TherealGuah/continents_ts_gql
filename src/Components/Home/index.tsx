@@ -36,7 +36,7 @@ function Home(): JSX.Element {
             </div>
 
             <div className="flex flex-row mx-8 py-8">
-                <div className="w-1/5 mr-16" >
+                <div className="w-1/2 mr-8 md:w-1/5 md:mr-16" >
                     <ul className="border-b-2  flex flex-col justify-between ">
                         {
                             continents.map( (continent, index) => <Continent key={index} continent={continent} handleContinentChange={handleContinentChange}/>)

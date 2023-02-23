@@ -13,7 +13,7 @@ const Continent = (props: ContinentJson): JSX.Element => {
 
     return(
         <li className="mb-4 hover:font-bold hover:bg-sky-400/75 hover:text-white shadow-lg rounded-lg">
-            <button className="w-full px-2 py-1" onClick={props.handleContinentChange} value={code}>{name}</button>
+            <button className="w-full min-w-min px-2 py-1" onClick={props.handleContinentChange} value={code}>{name}</button>
         </li>
     );
 };
